@@ -22,6 +22,7 @@ class SearchResult:
             metadata=data['metadata']
         )
 
+
 @dataclass
 class Dataset:
     client: 'EmbedbaseClient'
@@ -39,10 +40,11 @@ class Dataset:
     def create_context(self, query: str, limit: Optional[int] = None) -> List[Dict[str, Any]]:
         return self.client.create_context(self.dataset, query, limit)
 
-
+    def clear(self) -> None:
+        return self.client.clear(self.dataset)
 
 class EmbedbaseClient:
-    def __init__(self, embedbase_url: str, embedbase_key: Optional[str] = None):
+    def __init__(self, embedbase_url: str = "https://api.embedbase.xyz", embedbase_key: Optional[str] = None):
         if not embedbase_url:
             raise ValueError("embedbase_url is required.")
         
@@ -84,6 +86,11 @@ class EmbedbaseClient:
         res.raise_for_status()
         data = res.json()
         return [{"id": result["id"], "status": "error" if data.get("error") else "success"} for result in data["results"]]
+
+    def clear(self, dataset: str) -> None:
+        url = f"{self.embedbase_api_url}/{dataset}/clear"
+        res = requests.get(url, headers=self.headers)
+        res.raise_for_status()
 
     def dataset(self, dataset: str) -> Dataset:
         return Dataset(client=self, dataset=dataset)

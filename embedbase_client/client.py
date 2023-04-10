@@ -71,6 +71,7 @@ class EmbedbaseClient:
         res = requests.post(search_url, headers=self.headers, json={"query": query, "top_k": top_k})
         res.raise_for_status()
         data = res.json()
+        # pylint: disable=no-any-return
         return data["similarities"]
 
     def add(self, dataset: str, document: str, metadata: Optional[Dict[str, Any]] = None) -> Dict[str, Union[str, int]]:

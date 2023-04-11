@@ -1,6 +1,15 @@
-# embedbase-client
+# embedbase-py
 
 <div align="center">
+
+Embedbase-py - Python client for [Embedbase](https://github.com/different-ai/embedbase)
+<br>
+<br>
+⚠️ Status: Alpha release ⚠️
+<br>
+<br>
+<a href="https://discord.gg/pMNeuGrDky"><img alt="Discord" src="https://img.shields.io/discord/1066022656845025310?color=black&style=for-the-badge"></a>
+<!--
 
 [![Build status](https://github.com/embedbase-py/embedbase-client/workflows/build/badge.svg?branch=master&event=push)](https://github.com/embedbase-py/embedbase-client/actions?query=workflow%3Abuild)
 [![Python Version](https://img.shields.io/pypi/pyversions/embedbase-client.svg)](https://pypi.org/project/embedbase-client/)
@@ -13,10 +22,21 @@
 [![License](https://img.shields.io/github/license/embedbase-py/embedbase-client)](https://github.com/embedbase-py/embedbase-client/blob/master/LICENSE)
 ![Coverage Report](assets/images/coverage.svg)
 
-Awesome `embedbase-client` is a Python cli/package created with https://github.com/TezRomacH/python-package-template
+-->
 
 </div>
 
+This is not an officially launched product and currently lacks documentation. Please use at your own risk. If you are using this library, please let us know by opening an issue or contacting us on [discord](https://discord.gg/pMNeuGrDky).
+
+We plan to document this library in the near future on our [documentation](https://github.com/different-ai/embedbase-docs).
+
+## Getting started
+
+```bash
+pip install git+https://github.com/different-ai/embedbase-py
+```
+
+<!--
 ## Very first steps
 
 ### Initialize your code
@@ -402,3 +422,5 @@ This project is licensed under the terms of the `MIT` license. See [LICENSE](htt
 ## Credits [![🚀 Your next Python package needs a bleeding-edge project structure.](https://img.shields.io/badge/python--package--template-%F0%9F%9A%80-brightgreen)](https://github.com/TezRomacH/python-package-template)
 
 This project was generated with [`python-package-template`](https://github.com/TezRomacH/python-package-template)
+
+-->

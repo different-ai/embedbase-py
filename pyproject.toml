@@ -36,7 +36,7 @@ classifiers = [  #! Update me
 python = "^3.8"
 
 typer = {extras = ["all"], version = "^0.4.0"}
-rich = "^10.14.0"
+rich = "^13.3.3"
 # todo: optional dependencies
 tiktoken = "^0.3.3"
 
